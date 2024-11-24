@@ -58,19 +58,21 @@ const TimeTracker = () => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: '20px'
+      padding: '10px',
+      boxSizing: 'border-box',
+      overflow: 'hidden'
     }}>
       <div style={{
         position: 'absolute',
-        top: '20px',
-        right: '20px',
+        top: '10px',
+        right: '10px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-end'
       }}>
         <div style={{
           color: '#60A5FA',
-          fontSize: '2rem',
+          fontSize: window.innerWidth < 600 ? '1.5rem' : '2rem',
           fontWeight: 'bold',
           textShadow: '0 0 10px rgba(59, 130, 246, 0.7)'
         }}>
@@ -78,7 +80,7 @@ const TimeTracker = () => {
         </div>
         <div style={{
           color: '#60A5FA',
-          fontSize: '1.25rem',
+          fontSize: window.innerWidth < 600 ? '0.9rem' : '1.25rem',
           textShadow: '0 0 8px rgba(59, 130, 246, 0.7)'
         }}>
           {currentDate}
@@ -86,8 +88,8 @@ const TimeTracker = () => {
       </div>
       
       <h1 style={{
-        fontSize: '3rem',
-        marginTop: '10px',
+        fontSize: window.innerWidth < 600 ? '2rem' : '3rem',
+        marginTop: window.innerWidth < 600 ? '40px' : '10px',
         textAlign: 'center',
         fontWeight: 'bold'
       }}>
@@ -98,44 +100,53 @@ const TimeTracker = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '20px',
-        marginTop: '80px'
+        justifyContent: 'center',
+        gap: window.innerWidth < 600 ? '15px' : '20px',
+        marginTop: window.innerWidth < 600 ? '40px' : '80px',
+        width: '100%'
       }}>
         <div style={{
-          fontSize: '6rem',
+          fontSize: window.innerWidth < 600 ? '4rem' : '6rem',
           fontWeight: 'bold',
-          color: '#EF4444'
+          color: '#EF4444',
+          textShadow: '0 0 15px rgba(239, 68, 68, 0.5)'
         }}>
           {tokensRemaining}
         </div>
         
-        <div style={{ width: '80%', maxWidth: '600px' }}>
+        <div style={{
+          width: window.innerWidth < 600 ? '90%' : '80%',
+          maxWidth: '600px',
+          margin: '0 auto'
+        }}>
           <div style={{
             width: '100%',
-            height: '16px',
+            height: window.innerWidth < 600 ? '10px' : '16px',
             backgroundColor: '#374151',
-            position: 'relative'
+            borderRadius: '8px',
+            overflow: 'hidden'
           }}>
             <div style={{
               height: '100%',
               backgroundColor: '#10B981',
               width: `${100 - progressPercentage}%`,
-              transition: 'width 0.5s ease'
+              transition: 'width 0.5s ease',
+              borderRadius: '8px'
             }} />
           </div>
         </div>
         
         <div style={{
-          fontSize: '3rem',
+          fontSize: window.innerWidth < 600 ? '2rem' : '3rem',
           color: '#10B981'
         }}>
           {progressPercentage}%
         </div>
         
         <div style={{
-          fontSize: '3rem',
+          fontSize: window.innerWidth < 600 ? '2rem' : '3rem',
           color: '#EF4444',
-          marginTop: '20px'
+          marginTop: window.innerWidth < 600 ? '10px' : '20px'
         }}>
           {weekMinutes}
         </div>
