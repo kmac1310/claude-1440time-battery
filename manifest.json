@@ -1,23 +1,23 @@
 {
   "short_name": "1440TIME",
-  "name": "1440TIME Battery",
+  "name": "1440TIME",
   "icons": [
     {
       "src": "logo192.png",
-      "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
       "src": "logo512.png",
-      "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "maskable any"
     }
   ],
-  "start_url": ".",
+  "start_url": "/claude-1440time-battery/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "orientation": "portrait"
+  "prefer_related_applications": false
 }
